@@ -1,6 +1,6 @@
-files = ['ok_1.txt', 'ok_2.txt']
+files = [input(), input()]
 
 for file in files:
     with open(file) as f:
         l = list(map(lambda x: x.replace('\n', ''), f.readlines()))
-        print(len(l), len(set(l)))
+        print(f'for {file}, are there any duplicates?', len(l) != len(set(l)))
